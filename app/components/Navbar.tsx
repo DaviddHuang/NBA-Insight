@@ -45,26 +45,26 @@ export default function Navbar() {
           className="bx bx-menu xl:invisible block text-5xl cursor-pointer"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         />
-        <div
-          className={`absolute xl:invisible top-20 left-0 w-full bg-[#C8102E] flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${
-            isMenuOpen ? "opacity-100" : "opacity-0"
-          }`}
-          style={{ transition: "transform 0.3s ease, opacity 0.3s ease" }}
-        >
-          {[
-            { href: "/", text: "Home" },
-            { href: "/teams", text: "Teams" },
-            { href: "/positions", text: "Position" },
-            { href: "/search", text: "Search" },
-            { href: "/about", text: "About" },
-          ].map(({ href, text }) => (
-            <Link key={href} href={href}>
-              <li className="list-none w-full text-center p-4 hover:bg-[#C8102E] hover:text-white transition-all cursor-pointer">
-                {text}
-              </li>
-            </Link>
-          ))}
-        </div>
+        {isMenuOpen && (
+          <div
+            className="absolute xl:invisible top-20 left-0 w-full bg-[#C8102E] flex flex-col items-center gap-6 font-semibold text-lg transition-transform transform"
+            style={{ transition: "transform 0.3s ease, opacity 0.3s ease" }}
+          >
+            {[
+              { href: "/", text: "Home" },
+              { href: "/teams", text: "Teams" },
+              { href: "/positions", text: "Position" },
+              { href: "/search", text: "Search" },
+              { href: "/about", text: "About" },
+            ].map(({ href, text }) => (
+              <Link key={href} href={href}>
+                <li className="list-none w-full text-center p-4 hover:bg-[#C8102E] hover:text-white transition-all cursor-pointer">
+                  {text}
+                </li>
+              </Link>
+            ))}
+          </div>
+        )}
       </header>
     </div>
   );
