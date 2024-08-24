@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "caption": "Point Guard",
+        "icon": "/positions/PointGuard.png"
+    },
+    {
+        "id": 2,
+        "caption": "Shooting Guard",
+        "icon": "/positions/ShootingGuard.png"
+    },
+    {
+        "id": 3,
+        "caption": "Small Forward",
+        "icon": "/positions/SmallForward.png"
+    },
+    {
+        "id": 4,
+        "caption": "Power Forward",
+        "icon": "/positions/PowerForward.png"
+    },
+    {
+        "id": 5,
+        "caption": "Center",
+        "icon": "/positions/Center.png"
+    }
+]

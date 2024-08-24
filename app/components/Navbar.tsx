@@ -6,11 +6,11 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="w-full h-full absolute">
+    <div className="w-full fixed z-50">
       <header className="flex justify-between items-center text-black py-4 px-8 md:px-10 bg-[#C8102E] drop-shadow-xl">
         <Link href="/">
           <img
-            src="/assets/nba-insight.png"
+            src="/assets/nba-insight-black.png"
             alt="logo"
             className="w-20 hover:scale-105 transition-all"
           />
@@ -18,11 +18,11 @@ export default function Navbar() {
         <ul className="hidden xl:flex items-center gap-32 font-semibold text-base">
           {[
             { href: "/", src: "/assets/home.png", text: "Home" },
-            { href: "/teams", src: "/assets/team.png", text: "Team" },
+            { href: "/teams", src: "/assets/team.png", text: "Teams" },
             {
               href: "/positions",
               src: "/assets/position.png",
-              text: "Position",
+              text: "Positions",
             },
             { href: "/search", src: "/assets/search.png", text: "Search" },
             { href: "/about", src: "/assets/about.png", text: "About" },
