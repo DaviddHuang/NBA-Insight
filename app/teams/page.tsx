@@ -5,9 +5,13 @@ import Teams from "../data/teams.json";
 import AnimatedText from "../components/AnimatedText";
 import Link from "next/link";
 
+function formatUrl(title) {
+  return title.toLowerCase().replace(/\s+/g, "-");
+}
+
 export default function Page() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overscroll-behavior: none">
       <Navbar />
       <div className="px-8 pt-8">
         <AnimatedText
@@ -46,7 +50,7 @@ export default function Page() {
                       {team.caption}
                     </div>
                     <Link
-                      href={`/teams/${team.id}`}
+                      href={`/teams/${formatUrl(team.caption)}`}
                       className="mt-2 px-4 py-2 border-2 border-white text-white rounded-md hover:bg-black transition-colors duration-300 flex items-center justify-center"
                     >
                       View Team

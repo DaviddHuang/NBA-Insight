@@ -5,6 +5,10 @@ import Positions from "../data/positions.json";
 import AnimatedText from "../components/AnimatedText";
 import Link from "next/link";
 
+function formatUrl(title) {
+  return title.toLowerCase().replace(/\s+/g, "-");
+}
+
 export default function Page() {
   return (
     <div className="min-h-screen">
@@ -46,7 +50,7 @@ export default function Page() {
                       {position.caption}
                     </div>
                     <Link
-                      href={`/teams/${position.id}`}
+                      href={`/positions/${formatUrl(position.caption)}`}
                       className="mt-2 px-4 py-2 border-2 border-white text-white rounded-md hover:bg-black transition-colors duration-300 flex items-center justify-center"
                     >
                       View Position
