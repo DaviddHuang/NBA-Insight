@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Teams from "../data/teams.json";
 import AnimatedText from "../components/AnimatedText";
@@ -10,6 +10,14 @@ function formatUrl(title) {
 }
 
 export default function Page() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+  const filteredTeams = Teams.filter((team) =>
+    team.caption.toLowerCase().startsWith(searchQuery.toLowerCase())
+  );
+
   return (
     <div className="min-h-screen overscroll-behavior: none">
       <Navbar />
@@ -25,12 +33,14 @@ export default function Page() {
           type="text"
           placeholder="Search teams..."
           className="p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 w-96"
+          value={searchQuery}
+          onChange={handleSearchChange}
         />
       </div>
       <div className="px-4 mt-12">
         <div className="grid grid-cols-1 sm:grid-cols-6 md:grid-cols-5 lg:grid-cols-4 gap-4">
-          {Teams &&
-            Teams.map((team, index) => (
+          {filteredTeams.length > 0 ? (
+            filteredTeams.map((team, index) => (
               <div
                 className="relative flex flex-col items-center p-4 rounded-lg opacity-0"
                 key={team.id}
@@ -58,7 +68,10 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-            ))}
+            ))
+          ) : (
+            <p className="text-center col-span-full">No teams found.</p>
+          )}
         </div>
       </div>
     </div>

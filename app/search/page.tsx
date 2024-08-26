@@ -1,9 +1,7 @@
 "use client";
 import React from "react";
 import Navbar from "../components/Navbar";
-import Positions from "../data/positions.json";
 import AnimatedText from "../components/AnimatedText";
-import Link from "next/link";
 
 export default function Page() {
   return (
