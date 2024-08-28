@@ -1,9 +1,9 @@
 import React from "react";
 
-interface pageProps {
+interface PageProps {
   params: { id: string };
 }
 
-export default function page({ params }) {
+export default function Page({ params }: PageProps) {
   return <div>Hello {params.id}</div>;
 }

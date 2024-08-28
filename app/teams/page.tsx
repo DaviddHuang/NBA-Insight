@@ -1,17 +1,17 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, ChangeEvent } from "react";
 import Navbar from "../components/Navbar";
 import Teams from "../data/teams.json";
 import AnimatedText from "../components/AnimatedText";
 import Link from "next/link";
 
-function formatUrl(title) {
+function formatUrl(title: string) {
   return title.toLowerCase().replace(/\s+/g, "-");
 }
 
 export default function Page() {
   const [searchQuery, setSearchQuery] = useState("");
-  const handleSearchChange = (e) => {
+  const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
   };
   const filteredTeams = Teams.filter((team) =>
