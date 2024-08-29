@@ -28,29 +28,27 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="">
-      <div className="h-screen flex items-center">
+    <div className="flex justify-center items-center h-screen px-4">
+      <div className="flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:space-x-6">
         <Image
           src="/assets/nba2.png"
           width={200}
           height={100}
           alt="nba logo"
-          style={{ marginLeft: "190px" }}
           className={`transition-opacity duration-1000 ${
             isVisible.image ? "opacity-100" : "opacity-0"
           }`}
         />
-        <div className="flex flex-col items-start ml-4">
+        <div className="flex flex-col items-center lg:items-start">
           <AnimatedText
             text="Welcome to NBA Insight!"
             el="h1"
-            className="text-6xl font-serif mb-2 text-center whitespace-nowrap"
+            className="text-3xl lg:text-6xl customFontClass text-center lg:text-left"
           />
           <AnimatedText
             text="The Ultimate NBA Player Hub"
             el="h2"
-            className="font-serif"
-            style={{ marginLeft: "5px" }}
+            className="customFontClass text-lg lg:text-xl text-center lg:text-left ml-1"
           />
           <Link
             href="/teams"

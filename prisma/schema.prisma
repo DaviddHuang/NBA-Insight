@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Player {
+  player            String? @db.VarChar(255)
+  pos               String? @db.VarChar(2)
+  age               Int?
+  g                 Int?
+  gs                Int?
+  mp                Float?
+  fg                Float?
+  fga               Float?
+  fg_percentage     Float?
+  threep            Float?
+  threepa           Float?
+  threep_percentage Float?
+  twop              Float?
+  twopa             Float?
+  twop_percentage   Float?
+  efg_percentage    Float?
+  ft                Float?
+  fta               Float?
+  ft_percentage     Float?
+  orb               Float?
+  drb               Float?
+  trb               Float?
+  ast               Float?
+  stl               Float?
+  blk               Float?
+  tov               Float?
+  pf                Float?
+  pts               Float?
+  team              String? @db.VarChar(100)
+  birth             String? @db.VarChar(10)
+  college           String? @db.VarChar(255)
+  id                Int     @id @default(autoincrement()) @map("id")
+
+  @@map("NBA_Data")
+}

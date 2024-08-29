@@ -1,0 +1,11 @@
+/* public/fonts/customFont.css */
+
+@font-face {
+    font-family: "nbaFont";
+    src: url("nbaFont.ttf") format("truetype");
+  }
+  
+  .customFontClass {
+    font-family: "nbaFont", sans-serif;
+  }
+  

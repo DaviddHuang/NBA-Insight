@@ -25,7 +25,7 @@ export default function Page() {
         <AnimatedText
           text="Teams"
           el="h1"
-          className="text-center text-4xl md:text-6xl font-serif pt-16 md:pt-28"
+          className="text-center text-4xl md:text-6xl customFontClass pt-16 md:pt-28"
         />
       </div>
       <div className="mt-8 flex justify-center">
