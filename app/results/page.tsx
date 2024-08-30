@@ -23,8 +23,8 @@ const ResultsPage = async ({ searchParams }: PageProps) => {
     return (
       <div>
         <Navbar />
-        <div className="customFontClass text-center py-24">
-          No players found for "{searchQuery}".
+        <div className="customFontClass h-screen flex items-center justify-center text-4xl">
+          No players found for "{searchQuery}"
         </div>
       </div>
     );

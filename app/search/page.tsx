@@ -14,6 +14,13 @@ export default function Page() {
     }
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      handleSearch();
+    }
+  };
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -31,6 +38,7 @@ export default function Page() {
             placeholder="Search for players..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
+            onKeyDown={handleKeyDown}
             className="p-3 rounded-l-lg border border-gray-300 focus:outline-none focus:border-blue-500 w-96"
           />
           <button
