@@ -32,16 +32,16 @@ export default function Page() {
               Technical Work
             </h2>
             <p className="text-lg md:text-xl leading-relaxed mt-4 ">
-              The project first started off as a webscraping project where I
-              used Beautiful Soup to parse the HTML content on
+              The project first started off as a webscraping project in Python
+              where I used Beautiful Soup to parse the HTML content on
               Basketball-Reference and used pandas to merge and clean the data
-              into a csv file. Initially, I tried to find a table that contained
+              into a CSV file. Initially, I tried to find a table that contained
               all 30 NBA teams, however this was not possible so I ended up
               merging and cleaning two different tables for the data. As a
               result, I ended up with data for over 600 NBA players. For the
               frontend, I used Next.js with Tailwind CSS to build a responsive
               and interactive user interface. The backend is powered by a
-              PostgreSQL database, and I use Prisma for efficient querying and
+              PostgreSQL database, and I used Prisma for efficient querying and
               database management.
             </p>
           </div>

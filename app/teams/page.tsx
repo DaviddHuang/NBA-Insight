@@ -81,7 +81,9 @@ export default function Page() {
               </div>
             ))
           ) : (
-            <p className="text-center col-span-full">No teams found.</p>
+            <p className="text-center col-span-full customFontClass text-2xl">
+              No teams found.
+            </p>
           )}
         </div>
       </div>

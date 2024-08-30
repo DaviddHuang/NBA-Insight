@@ -1,11 +1,17 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import Navbar from "../components/Navbar";
 import AnimatedText from "../components/AnimatedText";
 
 export default function Page() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const router = useRouter();
+
   const handleSearch = () => {
-    alert("Search triggered!");
+    if (searchTerm.trim()) {
+      router.push(`/results?search=${searchTerm}`);
+    }
   };
 
   return (
@@ -23,6 +29,8 @@ export default function Page() {
           <input
             type="text"
             placeholder="Search for players..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
             className="p-3 rounded-l-lg border border-gray-300 focus:outline-none focus:border-blue-500 w-96"
           />
           <button

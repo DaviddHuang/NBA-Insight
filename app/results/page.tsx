@@ -2,21 +2,20 @@ import { prisma } from "@/lib/prisma";
 import Navbar from "@/app/components/Navbar";
 
 interface PageProps {
-  params: { id: string };
+  searchParams: { search: string };
 }
 
-const formatSlugToTitle = (slug: string): string => {
-  return slug
-    .split("-")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
-};
-
-const PlayerPage = async ({ params }: PageProps) => {
+const ResultsPage = async ({ searchParams }: PageProps) => {
+  const searchQuery = searchParams.search || "";
   const players = await prisma.player.findMany({
-    where: { team: formatSlugToTitle(params.id) },
+    where: {
+      player: {
+        contains: searchQuery,
+        mode: "insensitive",
+      },
+    },
     orderBy: {
-      pts: "desc",
+      player: "asc",
     },
   });
 
@@ -24,8 +23,8 @@ const PlayerPage = async ({ params }: PageProps) => {
     return (
       <div>
         <Navbar />
-        <div className="customFontClass">
-          No players found for team "{formatSlugToTitle(params.id)}".
+        <div className="customFontClass text-center py-24">
+          No players found for "{searchQuery}".
         </div>
       </div>
     );
@@ -236,4 +235,4 @@ const PlayerPage = async ({ params }: PageProps) => {
   );
 };
 
-export default PlayerPage;
+export default ResultsPage;
