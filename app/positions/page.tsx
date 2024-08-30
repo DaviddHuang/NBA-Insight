@@ -11,9 +11,16 @@ function formatUrl(title: string) {
 
 export default function Page() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [animationKey, setAnimationKey] = useState(Date.now());
   const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(e.target.value);
+    const query = e.target.value;
+    setSearchQuery(query);
+
+    if (query === "") {
+      setAnimationKey(Date.now());
+    }
   };
+
   const filteredPositions = Positions.filter((position) =>
     position.caption.toLowerCase().startsWith(searchQuery.toLowerCase())
   );
@@ -38,7 +45,10 @@ export default function Page() {
         />
       </div>
       <div className="px-4 mt-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div
+          key={animationKey}
+          className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4"
+        >
           {filteredPositions.length > 0 ? (
             filteredPositions.map((position, index) => (
               <div
@@ -56,12 +66,12 @@ export default function Page() {
                     className="w-64 h-64 object-cover rounded-lg"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-red-600 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex flex-col justify-end p-4 rounded-lg">
-                    <div className="text-white text-lg text-center font-serif">
+                    <div className="text-white text-lg text-center customFontClass">
                       {position.caption}
                     </div>
                     <Link
                       href={`/positions/${formatUrl(position.caption)}`}
-                      className="mt-2 px-4 py-2 border-2 border-white text-white rounded-md hover:bg-black transition-colors duration-300 flex items-center justify-center"
+                      className="mt-2 px-4 py-2 border-2 border-white text-white rounded-md hover:bg-black transition-colors duration-300 flex items-center justify-center customFontClass"
                     >
                       View Position
                     </Link>
@@ -70,7 +80,7 @@ export default function Page() {
               </div>
             ))
           ) : (
-            <p className="text-center col-span-full">No teams found.</p>
+            <p className="text-center col-span-full">No positions found.</p>
           )}
         </div>
       </div>

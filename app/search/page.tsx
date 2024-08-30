@@ -4,6 +4,10 @@ import Navbar from "../components/Navbar";
 import AnimatedText from "../components/AnimatedText";
 
 export default function Page() {
+  const handleSearch = () => {
+    alert("Search triggered!");
+  };
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -15,11 +19,19 @@ export default function Page() {
         />
       </div>
       <div className="mt-8 flex justify-center">
-        <input
-          type="text"
-          placeholder="Search for players..."
-          className="p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 w-96"
-        />
+        <div className="flex">
+          <input
+            type="text"
+            placeholder="Search for players..."
+            className="p-3 rounded-l-lg border border-gray-300 focus:outline-none focus:border-blue-500 w-96"
+          />
+          <button
+            onClick={handleSearch}
+            className="px-4 py-3 bg-blue-500 text-white font-semibold rounded-r-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          >
+            Go
+          </button>
+        </div>
       </div>
     </div>
   );

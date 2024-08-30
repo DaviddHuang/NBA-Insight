@@ -37,94 +37,94 @@ const PlayerPage = async ({ params }: PageProps) => {
           <table className="min-w-full divide-y divide-gray-200 text-xs">
             <thead className="bg-gray-50">
               <tr>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-20">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-24">
                   Name
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-14">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-14">
                   Pos
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-10">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-10">
                   Age
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-10">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-10">
                   GP
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-10">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-10">
                   GS
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-14">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-14">
                   MPG
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-14">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-14">
                   FGM
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-14">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-14">
                   FGA
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-14">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-14">
                   FG%
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-14">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-14">
                   3PM
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-14">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-14">
                   3PA
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-14">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-14">
                   3P%
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-14">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-14">
                   2PM
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-14">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-14">
                   2PA
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-14">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-14">
                   2P%
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-16">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-16">
                   EFG%
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-14">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-14">
                   FTM
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-14">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-14">
                   FTA
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-14">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-14">
                   FT%
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-14">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-14">
                   ORB
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-14">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-14">
                   DRB
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-14">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-14">
                   TR
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-12">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-12">
                   APG
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-12">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-12">
                   SPG
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-12">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-12">
                   BPG
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-12">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-12">
                   TOV
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-12">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-12">
                   PF
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-12">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-12">
                   PPG
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-20">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-20">
                   Nat
                 </th>
-                <th className="px-1 py-2 text-left font-medium text-gray-500 uppercase tracking-wider w-24">
+                <th className="px-1 py-2 text-left font-medium text-black uppercase tracking-wider w-24">
                   College
                 </th>
               </tr>
@@ -135,91 +135,91 @@ const PlayerPage = async ({ params }: PageProps) => {
                   <td className="px-1 py-2 whitespace-nowrap text-xs font-medium text-gray-900">
                     {player.player}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.pos}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.age}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.g}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.gs}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.mp}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.fg}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs ttext-black">
                     {player.fga}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.fg_percentage}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.threep}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.threepa}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.threep_percentage}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.twop}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.twopa}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.twop_percentage}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.efg_percentage}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.ft}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.fta}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.ft_percentage}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.orb}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.drb}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.trb}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.ast}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.stl}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.blk}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.tov}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.pf}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.pts}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 whitespace-nowrap text-xs text-black">
                     {player.birth}
                   </td>
-                  <td className="px-1 py-2 whitespace-nowrap text-xs text-gray-500">
+                  <td className="px-1 py-2 text-xs text-black">
                     {player.college}
                   </td>
                 </tr>

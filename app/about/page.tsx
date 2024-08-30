@@ -15,7 +15,9 @@ export default function Page() {
         />
         <div className="mt-8 md:mt-12 flex flex-col items-start max-w-4xl mx-auto">
           <div className="mb-8">
-            <h2 className="text-2xl md:text-4xl font-serif">Description</h2>
+            <h2 className="text-2xl md:text-4xl customFontClass">
+              Description
+            </h2>
             <p className="text-lg md:text-xl leading-relaxed mt-4">
               NBA Insight is the ultimate NBA player hub. Search for your
               favourite players and teams with ease! All data is taken from
@@ -26,8 +28,10 @@ export default function Page() {
             </p>
           </div>
           <div>
-            <h2 className="text-2xl md:text-4xl font-serif">Technical Work</h2>
-            <p className="text-lg md:text-xl leading-relaxed mt-4">
+            <h2 className="text-2xl md:text-4xl customFontClass">
+              Technical Work
+            </h2>
+            <p className="text-lg md:text-xl leading-relaxed mt-4 ">
               The project first started off as a webscraping project where I
               used Beautiful Soup to parse the HTML content on
               Basketball-Reference and used pandas to merge and clean the data

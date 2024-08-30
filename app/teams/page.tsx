@@ -11,9 +11,17 @@ function formatUrl(title: string) {
 
 export default function Page() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [animationKey, setAnimationKey] = useState(Date.now());
+
   const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(e.target.value);
+    const query = e.target.value;
+    setSearchQuery(query);
+
+    if (query === "") {
+      setAnimationKey(Date.now());
+    }
   };
+
   const filteredTeams = Teams.filter((team) =>
     team.caption.toLowerCase().startsWith(searchQuery.toLowerCase())
   );
@@ -38,11 +46,14 @@ export default function Page() {
         />
       </div>
       <div className="px-4 mt-12">
-        <div className="grid grid-cols-1 sm:grid-cols-6 md:grid-cols-5 lg:grid-cols-4 gap-4">
+        <div
+          key={animationKey}
+          className="grid grid-cols-1 sm:grid-cols-6 md:grid-cols-5 lg:grid-cols-4 gap-4"
+        >
           {filteredTeams.length > 0 ? (
             filteredTeams.map((team, index) => (
               <div
-                className="relative flex flex-col items-center p-4 rounded-lg opacity-0"
+                className="relative flex flex-col items-center p-4 rounded-lg opacity-0 customFontClass"
                 key={team.id}
                 style={{
                   animation: `fadeIn 1s ease-in-out forwards`,
@@ -56,7 +67,7 @@ export default function Page() {
                     className="w-48 h-48 object-contain md:w-72 md:h-72"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-red-600 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex flex-col justify-end p-4 rounded-lg">
-                    <div className="text-white text-lg text-center font-serif">
+                    <div className="text-white text-lg text-center customFontClass">
                       {team.caption}
                     </div>
                     <Link
